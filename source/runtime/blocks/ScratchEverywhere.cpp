@@ -34,7 +34,10 @@ SCRATCH_BLOCK(SE, platform) {
     *outValue = Value(OS::getPlatform());
     return BlockResult::CONTINUE;
 }
-
+SCRATCH_BLOCK(SE, isTurbowarp) {
+   return false;
+    return BlockResult::CONTINUE;
+}
 SCRATCH_BLOCK(SE, controller) {
 #ifdef RENDERER_CITRO2D
     *outValue = Value("3DS");
